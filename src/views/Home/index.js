@@ -1,8 +1,9 @@
 import React from 'react';
 import './style.css';
 
-// static assets
+// Static assets
 import pineapple from '../../static/pineapple.svg'
+import avatar1 from '../../static/avatar4.svg'
 
 // Components
 import Header from '../../components/Header'
@@ -14,6 +15,9 @@ function HomeView() {
         <Header 
             logo={pineapple}
             name='Loan Simulator'
+            user={
+                <img width="40" src={avatar1} alt="user_img"/>
+            }
         />
         <div className="home_content">
             <LoanSimulator />

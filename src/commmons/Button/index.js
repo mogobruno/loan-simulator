@@ -1,11 +1,12 @@
 import React from 'react';
 import clsx from 'clsx';
 
+// Styles
 import './style.css';
 
 const Button = ({ className, ...props }) => {
   const classes = clsx(
-    'button',
+    'ls_button',
     className,
   );
 
