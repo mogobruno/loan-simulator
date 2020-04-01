@@ -55,5 +55,29 @@
 .loan_simulator_loading {
     display: flex;
     justify-content: center;
-    padding: 20px;
+}
+@media screen and (max-width: 600px) {
+    .loan_simulator_result {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .loan_simulator_content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .loan_simulator_content .input_flex {
+        width: calc(100% - 23px);
+        margin-bottom: 15px;
+    }
+
+    .loan_simulator_result_group, .loan_simulator_result_value {
+        margin-bottom: 15px
+    }
+
+    .loan_simulator_result button {
+        width: 100%;
+    }
 }
