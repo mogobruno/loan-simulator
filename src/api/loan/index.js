@@ -12,6 +12,10 @@ const simulateLoan = (duration, amount) => {
 
 const simulate = ({ duration, amount }) => {
     return new Promise((resolve, reject) => {
+        if (duration <= 0 || amount <= 0) {
+            reject({ message: 'We can not run any simulation under negative values' })
+        }
+
         if (duration > 36) {
             reject({ message: 'Loan can not be created for more then 36 months (3 years).' })
         }

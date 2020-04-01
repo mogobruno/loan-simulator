@@ -4,13 +4,13 @@ import React, { Fragment, useState } from 'react';
 import money from '../../static/money.svg'
 
 // Commons
-import Card from '../../commmons/Card'
-import Input from '../../commmons/Input'
-import Button from '../../commmons/Button'
-import Loader from '../../commmons/Loader'
+import Card from '../../commons/Card'
+import Input from '../../commons/Input'
+import Button from '../../commons/Button'
+import Loader from '../../commons/Loader'
 
 // Apis
-import Loan from '../../api/loan'
+import Loan from '../../api/Loan'
 
 // Styles
 import './style.css'

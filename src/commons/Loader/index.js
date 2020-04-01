@@ -5,9 +5,9 @@ import clsx from 'clsx';
 import './style.css';
 
 function Loader({ className, ...props }) {
-    const classes = clsx('lds-circle', className)
+    const classes = clsx('ls_circle', className)
     return (
-        <div class={classes} {...props}><div><p>€</p></div></div>
+        <div className={classes} {...props}><div><p>€</p></div></div>
     );
 }
 

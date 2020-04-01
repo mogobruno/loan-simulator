@@ -56,11 +56,12 @@
     display: flex;
     justify-content: center;
 }
+
 @media screen and (max-width: 600px) {
     .loan_simulator_result {
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: flex-start;
     }
 
     .loan_simulator_content {

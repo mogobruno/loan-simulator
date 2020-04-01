@@ -6,8 +6,10 @@ import pineapple from '../../static/pineapple.svg'
 import avatar1 from '../../static/avatar4.svg'
 
 // Components
-import Header from '../../components/Header'
 import LoanSimulator from '../../components/LoanSimulator'
+
+// Commons
+import Header from '../../commons/Header'
 
 function HomeView() {
   return (

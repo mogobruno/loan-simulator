@@ -1,25 +1,25 @@
-.lds-circle {
+.ls_circle {
     display: inline-block;
     transform: translateZ(1px);
 }
 
-.lds-circle > div {
+.ls_circle > div {
     display: inline-block;
     width: 64px;
     height: 64px;
     border-radius: 50%;
     background: #fce258;
-    animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    animation: ls_circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
     font-size: 35px;
     text-align: center;
 }
 
-.lds-circle > div > p {
+.ls_circle > div > p {
     padding-top: 16px;
     color: white;
 }
 
-@keyframes lds-circle {
+@keyframes ls_circle {
     0%, 100% {
         animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
     }
