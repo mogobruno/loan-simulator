@@ -1,0 +1,44 @@
+.loan_simulator_header {
+    display: flex;
+    align-items: center;
+}
+
+.loan_simulator_header_img {
+    width: 50px;
+    margin-right: 10px;
+    height: 50px;
+}
+
+.loan_simulator_header_text {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.loan_simulator_content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.loan_simulator_content input {
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+.input {    
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+}
+
+.loan_simulator_result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loan_simulator_result_value {
+    font-size: 25px;
+}
