@@ -1,4 +1,4 @@
-## Loan Simulator
+![](loan-simulator.gif)
 
 Loan Simulator is a simple SPA that uses [surge](https://surge.sh) to be deployed
 
