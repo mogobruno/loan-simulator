@@ -7,7 +7,7 @@ import './style.css';
 function Card({ className, children, ...props }) {
     const classes = clsx('ls_card', className)
     return (
-        <div class={classes} {...props}>
+        <div className={classes} {...props}>
             {children}
         </div>
     );

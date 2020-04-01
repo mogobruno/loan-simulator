@@ -46,3 +46,14 @@
 .loan_simulator_result_group p:nth-child(2) {
     font-size: 15px;
 }
+
+.loan_simulator_error {
+    font-size: 18px;
+    padding: 10px;
+}
+
+.loan_simulator_loading {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
