@@ -2,7 +2,7 @@ const FAKE_DELLAY = 1500
 const MONTHLY_INTEREST = 1.03;
 
 const simulateLoan = (duration, amount) => {
-    const monthlyInstallment = (amount / duration) * MONTHLY_INTEREST
+    const monthlyInstallment = (amount / (duration * 12)) * MONTHLY_INTEREST
     return {
         amount,
         duration,
@@ -16,12 +16,12 @@ const simulate = ({ duration, amount }) => {
             reject({ message: 'We can not run any simulation under negative values' })
         }
 
-        if (duration > 36) {
-            reject({ message: 'Loan can not be created for more then 36 months (3 years).' })
+        if (duration > 5) {
+            reject({ message: 'Loan can not be created for more then 5 years.' })
         }
 
-        if (amount > 1000000) {
-            reject({ message: 'We are not doing loans of more then € 1.000.000 at this moment.' })
+        if (amount > 100000) {
+            reject({ message: 'We are not doing loans of more then € 100.000 at this moment.' })
         }
 
         setTimeout(() => resolve(simulateLoan(duration, amount)), FAKE_DELLAY)

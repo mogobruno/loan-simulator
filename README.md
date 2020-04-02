@@ -49,3 +49,7 @@ To run then just use the command
 `yarn cy:open`
 
 and then choose `loan_simulation_flow.spec.js`
+
+### TL;DR
+
+All used icons are free and they can be found in https://www.iconfinder.com/

@@ -27,7 +27,7 @@ const loanSimulatorResult = ({duration, amount, monthlyInstallment}) => {
                 <p>€{amount.toFixed(2)}</p>
             </div>
             <div className="loan_simulator_result_group">
-                <p>Months:</p>
+                <p>Years:</p>
                 <p>{duration}</p>
             </div>
             <Button>Apply</Button>
@@ -57,7 +57,7 @@ function LoanSimulator() {
     const simulateLoan = (event) => {
         event.preventDefault()
         const amount = parseInt(event.target.amount.value)
-        const duration = parseInt(event.target.months.value)
+        const duration = parseInt(event.target.duration.value)
         
         setLoading(true)
         setSimulation(null)
@@ -65,12 +65,8 @@ function LoanSimulator() {
 
         Loan
             .simulate({ amount, duration })
-            .then((response) => {
-                setSimulation(response)
-            })
-            .catch((e) => {
-                setError(e.message)
-            })
+            .then((response) => setSimulation(response))
+            .catch((error) => setError(error.message))
             .finally(() => setLoading(false))
     }
 
@@ -84,20 +80,18 @@ function LoanSimulator() {
                 <form className="loan_simulator_content" onSubmit={simulateLoan}>
                     <Input
                         required
-                        min={1}
+                        min={10000}
                         name="amount"
                         className="input_flex"
-                        label="Amount"
                         placeholder="Amount"
                         type="number"
                     />
                     <Input
                         required
                         min={1}
-                        name="months"
+                        name="duration"
                         className="input_flex"
-                        label="Months"
-                        placeholder="Duration - months"
+                        placeholder="Duration - years"
                         type="number"
                     />
                     <Button className="button_flex">Simulate</Button>

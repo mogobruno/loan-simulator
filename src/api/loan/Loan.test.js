@@ -1,11 +1,11 @@
 import Loan from './index';
 
 describe('Loan.simulation', () => {
-    const validRequest = { amount: 100000, duration: 12 }
-    const invalidRequestAmount = { amount: 1000001, duration: 12 }
-    const invalidRequestDuration = { amount: 100000, duration: 37 }
-    const invalidRequestNegativeDuration = { amount: 100000, duration: -37 }
-    const invalidRequestNegativeAmount = { amount: -100000, duration: 12 }
+    const validRequest = { amount: 100000, duration: 5 }
+    const invalidRequestAmount = { amount: 100001, duration: 5 }
+    const invalidRequestDuration = { amount: 100000, duration: 6 }
+    const invalidRequestNegativeDuration = { amount: 100000, duration: -5 }
+    const invalidRequestNegativeAmount = { amount: -100000, duration: 5 }
 
     jest.useFakeTimers();
 
@@ -13,7 +13,7 @@ describe('Loan.simulation', () => {
         Loan
             .simulate(validRequest)
             .then((response) => {
-                expect(response).toEqual({ ...validRequest, monthlyInstallment: 8583.333333333334 })
+                expect(response).toEqual({ ...validRequest, monthlyInstallment: 1716.6666666666667 })
                 done()
             })
         jest.runAllTimers();
@@ -23,7 +23,7 @@ describe('Loan.simulation', () => {
         Loan
             .simulate(invalidRequestDuration)
             .catch((error) => {
-                expect(error.message).toEqual('Loan can not be created for more then 36 months (3 years).')
+                expect(error.message).toEqual('Loan can not be created for more then 5 years.')
                 done()
             })
         jest.runAllTimers();
@@ -33,7 +33,7 @@ describe('Loan.simulation', () => {
         Loan
             .simulate(invalidRequestAmount)
             .catch((error) => {
-                expect(error.message).toEqual('We are not doing loans of more then € 1.000.000 at this moment.')
+                expect(error.message).toEqual('We are not doing loans of more then € 100.000 at this moment.')
                 done()
             })
         jest.runAllTimers();
